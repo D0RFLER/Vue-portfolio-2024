@@ -1,7 +1,7 @@
 <template>
 
     <div class="gallery-body">
-<!----- HEADER --------------------------------->
+<!----- HEADER ------------------------------------------------------------------>
 
 <div class="header">
         <div class="logo-header">
@@ -19,11 +19,12 @@
             <router-link to="/contact" class="nav-link">CONTACT</router-link>
 
         </div>
-    </div>
 
-<!----- GALLERY Billeder --------------------------------->
-<div class="gallery">
-<div class="portfolio-gallery"> <!-- Container til gallery -->
+</div>
+
+<!----- GALLERY Billeder -------------------------------------------------------------->
+    <div class="gallery">
+        <div class="portfolio-gallery"> <!-- Container til gallery -->
 
   <div class="column"> <!-- Første column (6 pr. række) -->
       <div class="portfolio-piece">
@@ -104,11 +105,12 @@
 
   </div> <!-- Tredje column slut -->
 </div> <!-- Container til gallery ende -->
+
 </div>
 
 
 </div> <!-- gallery-body-kaos -->
-  </template>
+</template>
   
 
 
@@ -121,7 +123,7 @@
   *{
     padding: 0;
     margin: 0;
-  }
+    }
 
   .gallery-body {
     max-width: 1224px;
@@ -130,12 +132,12 @@
     padding: 15px 0;
 
     background-color: #f6f6f6;
-  }
+    }
   
   .portfolio-gallery {
     display: flex;
     gap: 15px; /* Giver mellemrum mellem columns */
-  }
+    }
 
   .column {
     display: flex;
@@ -143,21 +145,18 @@
     gap: 15px;
     margin-left: 20px;
     margin-right: 20px;
-  }
+    }
 
   .portfolio-piece {
-
     border-radius: 10px;
 
     object-fit: cover;
-  }
+    }
 
   .portfolio-piece-size {
-
     width: 300px;
     height: auto;
-
-  }
+    }
 
   
 
@@ -166,18 +165,18 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-    }
+        }
 
     .nav-links {
         display: flex;
         align-items: center;
-    }
+        }
 
     .logo-header {
         width: 75px;
         height: 75px;
         padding: 10px;
-    }
+        }
 
     .nav-link {
         margin: 0 15px;
@@ -189,28 +188,30 @@
         color: #0b0940;
         font-weight: 700;
         font-family: "Bebas Neue", sans-serif;
-    }
+        }
 
     .nav-link:hover {
         border-color: #27368c;
-    }
+        }
 
     .logo {
         display: flex;
         align-items: center;
-    }
+        }
 
-    @media(max-width:768px){
+
+/* Responsive fix ------------------------------------------------------------*/
+@media(max-width:768px){
 
     .portfolio-piece { 
       flex-direction: column;
-    }
+        }
 
     .portfolio-piece-size {
-    width: 100%; 
-    max-width: 100%; 
-    height: auto;
-    }
+        width: 100%; 
+        max-width: 100%; 
+        height: auto;
+        }
    
   }
 
