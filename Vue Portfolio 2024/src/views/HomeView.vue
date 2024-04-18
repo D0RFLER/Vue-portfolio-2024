@@ -26,19 +26,14 @@
         <!-- Class'en bliver brugt til at re-size billede pga det er en PNG-fil -->
         <img src="../assets/GALLERY/home art image.PNG" alt=""  class="cover-illu">
         <!-- Coverbillede/stemningsbillede - lys blå elementer(#658CBF) -->
-            <!-- <div class="text-overlay">
-                <h3>Welcome to FURD STUDIOS</h3>
-                    <br>
-                This is the portfolio of FURD - feel free to roam around 
-            </div> Tekst med kort besked -->
     </div>
 </div>
+
 <!-- ____ FOOTER ____________________________________________________ -->
 
     <div class="footer">
-        <!-- Left Section -->
+        <!-- Ventre side elementer -->
         <div class="left">
-            <!-- Logo Icons Container -->
             <div class="logo-icons">
                 <a href="https://www.facebook.com/Freia.Ulla.Rask.Dorfler/" target="_blank">
                     <img src="../assets/icons8-facebook.svg" alt="" class ="pictogram">
@@ -59,7 +54,7 @@
             </div>
         </div>
     
-        <!-- Right Section -->
+        <!-- Højre side elementer -->
         <div class="right">
             <div class="colour-codes">
                 <div class="rounded-square-1"></div>
@@ -83,45 +78,25 @@
 
 <!----- Styles ---------------------------------------------------------------------->
 <style lang="scss">
-.body {
-  background-color: #f6f6f6;
-  margin: 0;
-}
+        .body {
+            background-color: #f6f6f6;
+            margin: 0;
+            }           
 
-.cover-illu-body {
-    margin: 0;
+        .cover-illu-body {
+            margin: 0;
+            }       
 
-}
+        .billede-container {
+             position: relative;
+             display: inline-block;
+             max-width: 100%;
+            }
 
-.billede-container {
-    position: relative;
-    display: inline-block;
-    max-width: 100%;
-}
-
-.cover-illu {
-    width: 100%;
-    height: auto; /* Fikser illustrationens højde efter behov */
-    max-width: 100%; /* Gør at billede bliver i browserens format */
-}
-
-// ----- TEKST PÅ BILLEDE -----
-
-.text-overlay {
-    position: absolute;
-    top: 10px; /* Adjust top distance */
-    left: 10px; /* Adjust right distance */
-    transform: translate(-50%, -50%);
-
-    max-width: calc(100% - 20px);
-
-    color: #658CBF; /* Samme farvekode som de elementer der er på billede */
-
-    padding: 10px; /* Adjust padding as needed */
-    border-radius: 5px; /* Add border radius for rounded corners */
-
-    font-weight: 700;
-    font-family: "Bebas Neue", sans-serif; /* Samme font som headlines */
+        .cover-illu {
+            width: 100%;
+            height: auto; /* Fikser illustrationens højde efter behov */
+            max-width: 100%; /* Gør at billede bliver i browserens format */
 }
 
 // ----- FOOTER -----
@@ -169,6 +144,7 @@
         height: 150px; /* Matcher logo højden */
         width: auto; 
     }
+
 /* Square Farvekoder */
    
     .rounded-square {
@@ -236,59 +212,48 @@
         margin-right: 5px; /* Mellemrum mellem de forskellige farve-kode-klumber */
     }
 
-/* Tekst + farve kaos */
-    .copy-right {
-        color: rgba(0, 0, 0, 0.3);
-        font-size: 12px;
-    }
+// ----- HEADER -----------------------------------------------------------------------------
 
-    .pictogram {
-        stroke: #27368c;
-    }
+    .header {
+        display: flex;
+        justify-content: space-between; /* Aligns logo and nav-links at opposite ends */
+        align-items: center; /* Center items vertically */
+        }
 
-// ----- HEADER -----
+    .nav-links {
+        display: flex;
+        align-items: center; /* Center items vertically */
+        }
 
-.header {
-    display: flex;
-    justify-content: space-between; /* Aligns logo and nav-links at opposite ends */
-    align-items: center; /* Center items vertically */
-}
+    .logo-header {
+        /* re-sizer logo */
+        width: 75px;
+        height: 75px;
+        padding: 10px;
+        }
 
-.nav-links {
-    display: flex;
-    align-items: center; /* Center items vertically */
-}
+    .nav-link {
+        margin: 0 15px; /* Adjust horizontal spacing */
+        padding: 5px 10px;
 
-.logo-header {
-    /* re-sizer logo */
-    width: 75px;
-    height: 75px;
-    padding: 10px;
-}
+        border: 2px solid transparent;
+        border-radius: 10px;
 
-.nav-link {
-    margin: 0 15px; /* Adjust horizontal spacing */
-    padding: 5px 10px;
-    border: 2px solid transparent;
-    border-radius: 10px;
-    transition: border-color 0.3s ease;
-    text-decoration: none;
-    color: #0b0940;
-    font-weight: 700;
-    font-family: "Bebas Neue", sans-serif;
-}
+        transition: border-color 0.3s ease;
+        text-decoration: none;
+        color: #0b0940;
+        font-weight: 700;
+        font-family: "Bebas Neue", sans-serif;
+        }
 
-.nav-link:hover {
-    border-color: #27368c;
-}
+    .nav-link:hover {
+        border-color: #27368c;
+        }
 
 /* Center the logo vertically */
-.logo {
-    display: flex;
-    align-items: center;
-}
-
-
-
+    .logo {
+        display: flex;
+        align-items: center;
+        }
 
 </style>
