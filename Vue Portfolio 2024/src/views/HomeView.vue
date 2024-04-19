@@ -24,7 +24,7 @@
 <div class="cover-illu-body">
     <div class="billede-container">
         <!-- Class'en bliver brugt til at re-size billede pga det er en PNG-fil -->
-        <img src="../assets/GALLERY/home art image.PNG" alt=""  class="cover-illu">
+        <img src="../assets/GALLERY/home art image.JPG" alt=""  class="cover-illu">
         <!-- Coverbillede/stemningsbillede - lys blå elementer(#658CBF) -->
     </div>
 </div>
