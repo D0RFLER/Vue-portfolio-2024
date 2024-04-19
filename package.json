@@ -1,5 +1,10 @@
 {
   "devDependencies": {
-    "sass": "^1.75.0"
-  }
+    "sass": "^1.75.0",
+    "vue": "^3.0.0",
+  "@vue/cli-service": "^4.5.0"
+
 }
+
+}
+
