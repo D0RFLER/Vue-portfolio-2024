@@ -23,140 +23,80 @@
 </div>
 
 <!----- GALLERY Billeder -------------------------------------------------------------->
-    <div class="gallery">
-        <div class="portfolio-gallery"> <!-- Container til gallery -->
+    
 
-  <div class="column"> <!-- Første column (6 pr. række) -->
-      <div class="portfolio-piece">
-          <img src="../assets/GALLERY/INTERNATIONAL DAY 01.PNG" alt="" class="portfolio-piece-size">
-      </div>
-
-      <div class="portfolio-piece">
-          <img src="../assets/GALLERY/STJERNESKUD.PNG" alt="" class="portfolio-piece-size">
-      </div>
-
-      <div class="portfolio-piece">
-          <img src="../assets/GALLERY/ORANGE ZONE.PNG" alt="" class="portfolio-piece-size">
-      </div>
-
-      <div class="portfolio-piece">
-          <img src="../assets/GALLERY/Potion bottle colletion.PNG" alt="" class="portfolio-piece-size">
-      </div>
-
-      <div class="portfolio-piece">
-          <img src="../assets/GALLERY/TRAPHOLT 5.PNG" alt="" class="portfolio-piece-size">
-      </div>
-
-      <div class="portfolio-piece">
-          <img src="../assets/GALLERY/FLOWERS 001.PNG" alt="" class="portfolio-piece-size">
-      </div>
-  </div> <!-- Første column slut -->
-  
-  <div class="column"> <!-- Anden column start -->
-      <div class="portfolio-piece">
-          <img src="../assets/GALLERY/PAPAYA POSTER.PNG" alt="" class="portfolio-piece-size">
-      </div>
-
-      <div class="portfolio-piece">
-          <img src="../assets/GALLERY/INTERNATIONAL DAY 03.PNG" alt="" class="portfolio-piece-size">
-      </div>
-
-      <div class="portfolio-piece">
-          <img src="../assets/GALLERY/UX HOVEDER.PNG" alt="" class="portfolio-piece-size">
-      </div>
-
-      <div class="portfolio-piece">
-          <img src="../assets/GALLERY/TRAPHOLT 03.PNG" alt="" class="portfolio-piece-size">
-      </div>
-
-      <div class="portfolio-piece">
-          <img src="../assets/GALLERY/potion pixel art.PNG" alt="" class="portfolio-piece-size">
-      </div>
-
-      <div class="portfolio-piece">
-          <img src="../assets/GALLERY/cloud pixel bottle.PNG" alt="" class="portfolio-piece-size">
-      </div>
-  </div> <!-- Anden column slut -->
-
-  <div class="column"> <!-- Tredje column start -->
-      <div class="portfolio-piece">
-          <img src="../assets/GALLERY/POMEGRANATE POSTER.PNG" alt="" class="portfolio-piece-size">
-      </div>
-
-      <div class="portfolio-piece">
-          <img src="../assets/GALLERY/TRAPHOLT 1.PNG" alt="" class="portfolio-piece-size">
-      </div>
-
-      <div class="portfolio-piece">
-          <img src="../assets/GALLERY/xo bil.PNG" alt="" class="portfolio-piece-size">
-      </div>
-
-      <div class="portfolio-piece">
-          <img src="../assets/GALLERY/INTERNATIONAL DAY 02.PNG" alt="" class="portfolio-piece-size">
-      </div>
-
-      <div class="portfolio-piece">
-          <img src="../assets/GALLERY/TRAPHOLT 04.PNG" alt="" class="portfolio-piece-size">
-      </div>
-
-      <div class="portfolio-piece">
-          <img src="../assets/GALLERY/Nausicaa pixel art.PNG" alt="" class="portfolio-piece-size">
-      </div>
-
-  </div> <!-- Tredje column slut -->
-</div> <!-- Container til gallery ende -->
-
+  <div class="gallery">
+    <div class="gallery-item" v-for="(image, index) in images" :key="index">
+      <img :src="image.src" :alt="image.alt">
+    </div>
+  </div>
 </div>
-
-
-</div> <!-- gallery-body-kaos -->
 </template>
+
+<script>
+export default {
+  name: 'ImageGallery',
+  data() {
+    return {
+      images: [
+        { src:"../assets/GALLERY/Nausicaa pixel art.PNG" },
+        { src:"../assets/GALLERY/TRAPHOLT 04.PNG" }, 
+        { src:"../assets/GALLERY/INTERNATIONAL DAY 02.PNG" },
+        { src:"../assets/GALLERY/xo bil.PNG" },
+        { src:"../assets/GALLERY/TRAPHOLT 1.PNG" },
+        { src:"../assets/GALLERY/POMEGRANATE POSTER.PNG" },
+        { src:"../assets/GALLERY/cloud pixel bottle.PNG" }, 
+        { src:"../assets/GALLERY/potion pixel art.PNG"  },
+        { src:"../assets/GALLERY/TRAPHOLT 03.PNG" },
+        { src:"../assets/GALLERY/UX HOVEDER.PNG" },
+        { src:"../assets/GALLERY/INTERNATIONAL DAY 03.PNG" },
+        { src:"../assets/GALLERY/PAPAYA POSTER.PNG" },
+        { src:"../assets/GALLERY/FLOWERS 001.PNG" },
+        { src:"../assets/GALLERY/TRAPHOLT 5.PNG" },
+        { src:"../assets/GALLERY/Potion bottle colletion.PNG"  },
+        { src:"../assets/GALLERY/ORANGE ZONE.PNG" },
+        { src:"../assets/GALLERY/STJERNESKUD.PNG" },
+        { src:"../assets/GALLERY/INTERNATIONAL DAY 01.PNG" },
+      ],
+    };
+  },
+};
+</script>
+
+<style scoped>
+
+</style>
   
 
 
 <!----- Styles ---------------------------------------------------------------------->
 
-<style>
+<style scoped>
 
 /* Gallery styles */
 
-  *{
-    padding: 0;
-    margin: 0;
-    }
-
-  .gallery-body {
-    max-width: 1224px;
-    width: 90%;
-    margin: auto;
-    padding: 15px 0;
-
+.gallery.body {
     background-color: #f6f6f6;
-    }
+}
   
-  .portfolio-gallery {
-    display: flex;
-    gap: 15px; /* Giver mellemrum mellem columns */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
     }
 
-  .column {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    margin-left: 20px;
-    margin-right: 20px;
-    }
+.gallery-item {
+  margin: 10px;
+}
 
-  .portfolio-piece {
-    border-radius: 10px;
+.gallery-item img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
 
-    object-fit: cover;
-    }
 
-  .portfolio-piece-size {
-    width: 300px;
-    height: auto;
-    }
+
+
 
   
 

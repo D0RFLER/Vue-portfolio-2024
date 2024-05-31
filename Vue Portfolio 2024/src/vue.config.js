@@ -3,3 +3,7 @@ module.exports = {
         ? '/Vue-Portfolio-2024/'
         : '/'
 }
+
+export default defineConfig({
+    assetsInclude: ['**/*.PNG'],
+  })
